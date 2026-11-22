@@ -1,0 +1,62 @@
+FinSight RAG Evaluation Results
+================================================================================
+Generated on: 2026-05-06 16:14:44
+
+Loading saved knowledge base...
+{'documents_processed': 3, 'chunks_created': 1895, 'sources': ['apple_10k_2024.pdf', 'microsoft_10k_2024.pdf', 'nvidia_10k_2024.pdf'], 'loaded_from': 'vector_store'}
+
+Running: Compare the main risk factors across Apple, Microsoft, and NVIDIA.
+  Scoring answer quality...
+Running: Compare the main revenue drivers for Apple, Microsoft, and NVIDIA.
+  Scoring answer quality...
+Running: Compare the cloud, AI, and data center strategy across Microsoft and NVIDIA.
+  Scoring answer quality...
+Running: What financial metrics are mentioned across the uploaded filings?
+  Scoring answer quality...
+
+Evaluation Results
+================================================================================
+
+Question    : Compare the main risk factors across Apple, Microsoft, and NVIDIA.
+Latency     : 9.67 seconds
+Sources     : ['apple_10k_2024.pdf', 'microsoft_10k_2024.pdf', 'nvidia_10k_2024.pdf']
+Coverage    : 1.0
+Answer len  : 1193 characters
+Chunks used : 8
+Quality     : 3 / 5
+Reasoning   : The answer provides some relevant risk factors for each company, but lacks depth and specificity. It also fails to identify distinct risk factors that are unique to each company, instead listing general risks that could apply to any business.
+
+Question    : Compare the main revenue drivers for Apple, Microsoft, and NVIDIA.
+Latency     : 9.37 seconds
+Sources     : ['apple_10k_2024.pdf', 'microsoft_10k_2024.pdf', 'nvidia_10k_2024.pdf']
+Coverage    : 1.0
+Answer len  : 866 characters
+Chunks used : 9
+Quality     : 4 / 5
+Reasoning   : The answer provides a clear and concise overview of each company's revenue drivers, including specific segments such as iPhone sales for Apple, Microsoft Cloud revenue for Microsoft, and Data Center revenue for NVIDIA. However, it falls short of an "Excellent" score because it does not provide more detailed information on the growth rates or trends within these segments, relying solely on percentage increases without context.
+
+Question    : Compare the cloud, AI, and data center strategy across Microsoft and NVIDIA.
+Latency     : 7.95 seconds
+Sources     : ['microsoft_10k_2024.pdf', 'nvidia_10k_2024.pdf']
+Coverage    : 1.0
+Answer len  : 763 characters
+Chunks used : 6
+Quality     : 4 / 5
+Reasoning   : The answer provides a clear and concise comparison of Microsoft's Azure AI platform and NVIDIA's data center strategy, highlighting their respective strengths in AI infrastructure. However, it falls short of being "Excellent" because it doesn't delve deeper into the technical details or provide more nuanced analysis of the companies' roles in the AI ecosystem.
+
+Question    : What financial metrics are mentioned across the uploaded filings?
+Latency     : 8.81 seconds
+Sources     : ['apple_10k_2024.pdf', 'microsoft_10k_2024.pdf', 'nvidia_10k_2024.pdf']
+Coverage    : 1.0
+Answer len  : 581 characters
+Chunks used : 9
+Quality     : 3 / 5
+Reasoning   : The answer provides a list of financial metrics mentioned across the uploaded filings, but it lacks specific numbers and concrete figures to support its claims. It also fails to provide any analysis or context for these metrics, making it an acceptable but not excellent response.
+
+Summary
+================================================================================
+Average source coverage : 1.0
+Average latency         : 8.95 seconds
+Average quality score   : 3.5 / 5
+
+Saved to: C:\Users\kcman\Desktop\FinSight_RAG\evaluation\evaluation_results.txt
